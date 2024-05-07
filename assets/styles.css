@@ -2,6 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-dashboard {
+    width: 600px;
+}
+
+.left-dashboard {
+background-color: #240046;
+color: white;
+width: 300px;
+height: 800px;
+text-align: center;
 }
 
 .user-image {
