@@ -15,20 +15,19 @@ body {
 
 .main-dashboard {
     width: 70%;
-    background-color: #f1dcfd;
+    background-color: #f1e0ff;
     display: flex;
-    flex-direction: row;
     align-items: center;
     border-radius: 20px;
 }
 
 .left-dashboard {
-background-color: #240046;
-color: white;
-width: 300px;
-height: 800px;
-text-align: center;
-border-radius: 20px 0 0 20px;
+    background-color: #0B001F;
+    color: #FCF8FF;
+    width: 300px;
+    height: 800px;
+    text-align: center;
+    border-radius: 20px 0 0 20px;
 }
 
 .user-image {
@@ -43,5 +42,48 @@ border-radius: 20px 0 0 20px;
 }
 
 .bottom-dashboard {
-margin-top: 90%;
+    margin-top: 90%;
+}
+
+.left-button {
+    background-color: #f1e0ff ;
+    color: #240046;
+    width: 60%;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.right-dashboard {
+    width: calc(100% - 300px);
+}
+
+.top-info {
+    display: flex;
+}
+
+.divider-top{
+    border-bottom: 4px solid;
+    width: 960px;
+    margin-left: 10px;
+}
+
+.to-do {
+    margin-left: 10px;
+}
+
+.real-time {
+margin-left: 60%;
+}
+
+.tasks {
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 400px;
+}
+
+.divider-do {
+
 }
