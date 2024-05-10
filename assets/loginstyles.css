@@ -120,6 +120,7 @@ body {
   font-weight: 700;
   margin-top: 20px;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .signin:hover {
@@ -161,6 +162,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   outline: none;
+  cursor: pointer;
 }
 
 .continue {
