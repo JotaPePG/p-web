@@ -40,7 +40,6 @@ formElement.addEventListener('submit', function (event) {
 
     // Salvar a nova tarefa no localStorage
     salvarTarefa(newTask);
-
     // Limpar os inputs após salvar a tarefa
     formElement.reset();
 
@@ -50,7 +49,25 @@ formElement.addEventListener('submit', function (event) {
     console.log(newTask);
     console.log(listaDeTarefas);
 
-    criarTabelasParaTarefas(listaDeTarefas);
+    // Verificar se existem tarefas salvas no localStorage
+    const tasksJSON = localStorage.getItem('tasks');
+
+    // Verificar se há tarefas salvas no localStorage
+    if (tasksJSON) {
+        // Converter os dados JSON de volta para objetos JavaScript
+        const tasks = JSON.parse(tasksJSON);
+
+        // Iterar sobre cada tarefa e criar uma tabela para ela
+        tasks.forEach(function(task) {
+            // Criar e adicionar uma tabela para a tarefa atual
+            const tabelaTarefa = criarTabelaParaTarefa(task);
+            tabelaContainer.appendChild(tabelaTarefa);
+        });
+    } else {
+        // Se não houver tarefas salvas, exibir uma mensagem ou realizar alguma outra ação
+        console.log('Não há tarefas armazenadas no localStorage.');
+    }
+
 });
 
 function buscarTarefas() {
