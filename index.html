@@ -2,61 +2,41 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Taskfy</title>
-	<link rel="shortcut icon" href="assets/images/T.png" />
-	<link rel="stylesheet" href="assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify Login</title>
+    <link rel="shortcut icon" href="assets/images/T.png" />
+
+    <link rel="stylesheet" href="assets/loginstyles.css">
 </head>
 
 <body>
-	<div class="block1">
-		<div class="containerblock1">
-			<div class="perfil-title">
-				<div class="foto"><img src="assets/images/retrato-do-homem-moderno.jpg" alt=""></div>
-				<div>
-					<h2 class="do-it">Do-it</h2>
-					<h2 class="name">James Robert</h2>
-				</div>
-			</div>
-			<div class="line">
-
-			</div>
-			<div class="selection todaytasks">
-				<img class="svg" src="assets/images/calendartoday.svg" alt="">
-				<h3>Today tasks</h3>
-			</div>
-			<div class="selection">
-				<img class="svg" src="assets/images/calendar.svg" alt="">
-				<h3>Scheduled tasks</h3>
-			</div>
-			<div class="selection">
-				<img class="svg" src="assets/images/settings.svg" alt="">
-				<h3>Settings</h3>
-			</div>
-		</div>
-	</div>
-	<div class="block2">
-		<div class="containerblock2">
-			<h1>Today tasks</h1>
-			<div class="container2">
-				<form class="bar" id="form" action="">
-					<input class="inserttask" type="text" placeholder="What is your next task?" required>
-					<div class="dateinputs">
-						<input class="inserttime" type="time" required>
-						<input class="insertdate" type="date" required>
-					</div>
-				</form>
-				<button id="send" type="submit" form="form" class="send">
-					<img src="assets/images/Vector.svg" alt="">
-				</button>
-			</div>
-			<div id="taskdiv" class="taskdiv">
-			</div>
-		</div>
-	</div>
-	</div>
-	<script src="assets/mais.js"></script>
+    <div class="block1"></div>
+    <div class="block2">
+        <div class="container">
+            <img class="logo" src="assets/images/Taskify.svg" alt="">
+            <h2 class="welcome">Welcome back!</h2>
+            <form action="taskify.html" id="form">
+                <input class="input" type="email" placeholder="name@gmail.com" required>
+                <input class="input" type="password" placeholder="Password" required>
+                <div class="same-line remember">
+                <label class="remembertext" for="checkbox"><input id="checkbox" class="checkbox" type="checkbox">Remember me</label>
+                <a class="reset" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Reset password</a>
+            </div>
+            </form>
+            <button form="form" type="submit" value="submit" class="signin">Sign in</button>
+            <div class="same-line signup">
+                <p>Dont't have an account? <a class="signuplink" href="register.html">Sign up</a></p>
+            </div>
+            <div class="line"></div>
+            <div class="same-line loginwith google"><img src="assets/images/icons8-google-logo 1.svg" alt="">
+                <p class="continue">Continue with Google</p>
+            </div>
+            <div class="same-line loginwith facebook"><img src="assets/images/icons8-facebook-novo 1.svg" alt="">
+                <p class="continue">Continue with Facebook</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

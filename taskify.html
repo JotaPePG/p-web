@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Taskfy</title>
+	<link rel="shortcut icon" href="assets/images/T.png" />
+	<link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+	<div class="block1">
+		<div class="containerblock1">
+			<div class="perfil-title">
+				<div class="foto"><img src="assets/images/retrato-do-homem-moderno.jpg" alt=""></div>
+				<div>
+					<h2 class="do-it">Do-it</h2>
+					<h2 class="name">James Robert</h2>
+				</div>
+			</div>
+			<div class="line">
+
+			</div>
+			<div class="selection todaytasks">
+				<img class="svg" src="assets/images/calendartoday.svg" alt="">
+				<h3>Today tasks</h3>
+			</div>
+			<div class="selection">
+				<img class="svg" src="assets/images/calendar.svg" alt="">
+				<h3>Scheduled tasks</h3>
+			</div>
+			<div class="selection">
+				<img class="svg" src="assets/images/settings.svg" alt="">
+				<h3>Settings</h3>
+			</div>
+		</div>
+	</div>
+	<div class="block2">
+		<div class="containerblock2">
+			<h1>Today tasks</h1>
+			<div class="container2">
+				<form class="bar" id="form" action="">
+					<input class="inserttask" type="text" placeholder="What is your next task?" required>
+					<div class="dateinputs">
+						<input class="inserttime" type="time" required>
+						<input class="insertdate" type="date" required>
+					</div>
+				</form>
+				<button id="send" type="submit" form="form" class="send">
+					<img src="assets/images/Vector.svg" alt="">
+				</button>
+			</div>
+			<div id="taskdiv" class="taskdiv">
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="assets/mais.js"></script>
+</body>
+
+</html>
