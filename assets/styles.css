@@ -79,6 +79,7 @@ body {
   align-items: center;
   margin-top: 40px;
   margin-left: 10%;
+  cursor: pointer;
 }
 
 .svg {
@@ -95,6 +96,7 @@ body {
   font-weight: 500;
   margin-left: 10px;
   color: #7c7c7c;
+  cursor: pointer;
 }
 
 .selected {
@@ -268,10 +270,12 @@ input[type="checkbox"]::before {
   transform: scale(0);
   background-color: #9d4edd;
   border-radius: 100px;
+  transition: 0.3s;
 }
 
 input[type="checkbox"]:checked::before {
   transform: scale(0.8);
+  transition: 0.3s;
 }
 
 .formatc3 {
@@ -288,6 +292,7 @@ input[type="checkbox"]:checked::before {
   border: none;
   background-color: #fffcf2;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .send:hover > img {
