@@ -25,6 +25,18 @@ const tabClicked = (tab) => {
   svg[0].setAttribute("class", "svg selected");
 };
 
+const scheduledTasks = document.getElementsByName("scheduled-tasks")[0];
+scheduledTasks.addEventListener("click", function () {
+  const tasksJSON = localStorage.getItem("tasks");
+  const tabelaContainer = document.getElementsByName("taskdiv-scheduled")[0];
+  const tasks = JSON.parse(tasksJSON);
+  tabelaContainer.innerHTML = "";
+  tasks.forEach(function (task) {
+    console.log(task.time);
+    tabelaContainer.appendChild(criarTabelaParaTarefa(task));
+  });
+});
+
 function salvarTarefa(task) {
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
