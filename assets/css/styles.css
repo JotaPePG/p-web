@@ -370,3 +370,8 @@ input[type="checkbox"]:checked::before {
   width: 24px;
   height: 24px;
 }
+
+.help {
+  margin-top: 115%;
+  margin-left: 10%;
+}
