@@ -1,6 +1,8 @@
 const formElement = document.getElementById("form");
 const sendButton = document.getElementById("send");
 const tabs = document.querySelectorAll(".tab-btn");
+const date = new Date();
+const today = date.getDate();
 
 let listaDeTarefas = [];
 
@@ -45,7 +47,6 @@ formElement.addEventListener("submit", function (event) {
   const taskDescription = document.querySelector(".inserttask").value;
   const taskTime = document.querySelector(".inserttime").value;
   const taskDate = document.querySelector(".insertdate").value;
-  const tasks = buscarTarefas();
   const tabelaContainer = document.getElementById("taskdiv");
 
   tabelaContainer.innerHTML = "";
@@ -77,12 +78,35 @@ formElement.addEventListener("submit", function (event) {
   if (tasksJSON) {
     // Converter os dados JSON de volta para objetos JavaScript
     const tasks = JSON.parse(tasksJSON);
-
-    // Iterar sobre cada tarefa e criar uma tabela para ela
+    let listaDeHorarios = [];
     tasks.forEach(function (task) {
+      let objeto = {
+        tarefa: task,
+        time: task.time,
+      };
+      listaDeHorarios.push(objeto);
+    });
+    // Iterar sobre cada tarefa e criar uma tabela para ela
+    console.log(listaDeHorarios);
+    listaDeHorarios = listaDeHorarios.sort((a, b) => {
+      const timeA = a.time.split(":").map(Number);
+      const timeB = b.time.split(":").map(Number);
+      const dateA = new Date();
+      const dateB = new Date();
+
+      dateA.setHours(timeA[0], timeA[1]);
+      dateB.setHours(timeB[0], timeB[1]);
+
+      return dateA - dateB;
+    });
+    listaDeHorarios.forEach(function (task) {
       // Criar e adicionar uma tabela para a tarefa atual
-      const tabelaTarefa = criarTabelaParaTarefa(task);
-      tabelaContainer.appendChild(tabelaTarefa);
+      const tabelaTarefa = criarTabelaParaTarefa(task.tarefa);
+      const taskDay = task.tarefa.date.slice(-2);
+      console.log(taskDay);
+      if (taskDay == today) {
+        tabelaContainer.appendChild(tabelaTarefa);
+      }
     });
   } else {
     // Se não houver tarefas salvas, exibir uma mensagem ou realizar alguma outra ação
@@ -128,6 +152,7 @@ function criarTabelaParaTarefa(task) {
   const checkbox = document.createElement("input");
   checkbox.classList.add("checkbox");
   checkbox.setAttribute("type", "checkbox");
+  checkbox.setAttribute("class", "checkbox-todaytasks");
 
   // Adicionar os elementos criados à tabela da tarefa
   timeCheckboxDiv.appendChild(taskTime);
