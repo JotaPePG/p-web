@@ -175,6 +175,10 @@ h1 {
   outline: none;
 }
 
+/* #datetime.checked {
+  background-color: red;
+} */
+
 input[type="time"]::-webkit-calendar-picker-indicator {
   min-width: 32px;
   min-height: 32px;
@@ -376,4 +380,20 @@ input[type="checkbox"]:checked::before {
   margin-left: 10%;
   position: absolute;
   bottom: 20px;
+}
+
+.help-btn {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  background-color: #fffcf2;
+  transition: 0.3s;
+}
+
+.help-btn:hover {
+  scale: 1.2;
+}
+
+.help-btn:active {
+  scale: 0.9;
 }

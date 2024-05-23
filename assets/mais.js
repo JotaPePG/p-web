@@ -159,3 +159,19 @@ function criarTabelasParaTarefas(listaDeTarefas) {
     tabelaContainer.appendChild(tabelaTarefa);
   });
 }
+
+// Verifica se os input estão em branco
+
+document.addEventListener("DOMContentLoaded", function () {
+  const datetime = document.getElementById("datetime");
+
+  if (meuInput) {
+    datetime.addEventListener("input", function () {
+      if (datetime.value.trim() !== "") {
+        datetime.classList.add("checked");
+      } else {
+        datetime.classList.remove("checked");
+      }
+    });
+  }
+});
