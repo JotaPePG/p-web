@@ -175,15 +175,22 @@ h1 {
   outline: none;
 }
 
-/* #datetime.checked {
-  background-color: red;
-} */
 
-input[type="time"]::-webkit-calendar-picker-indicator {
+#inserttime[type="time"]::-webkit-calendar-picker-indicator {
   min-width: 32px;
   min-height: 32px;
   filter: invert(40%) sepia(59%) saturate(1115%) hue-rotate(239deg)
     brightness(87%) contrast(98%);
+  transition: 1s;
+}
+
+#inserttime.checked[type="time"]::-webkit-calendar-picker-indicator {
+  min-width: 32px;
+  min-height: 32px;
+  filter: brightness(0) saturate(100%) invert(5%) sepia(53%) saturate(7425%)
+   hue-rotate(273deg) brightness(99%) contrast(109%);
+   scale: 1.2;
+   transition: 1s;
 }
 
 input[type="time"]::-webkit-datetime-edit-hour-field {
@@ -209,11 +216,21 @@ input[type="time"]::-webkit-datetime-edit-text {
   outline: none;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+#insertdate[type="date"]::-webkit-calendar-picker-indicator {
   min-width: 32px;
   min-height: 32px;
   filter: invert(40%) sepia(59%) saturate(1115%) hue-rotate(239deg)
     brightness(87%) contrast(98%);
+  transition: 1s;
+}
+
+#insertdate.checked[type="date"]::-webkit-calendar-picker-indicator {
+  min-width: 32px;
+  min-height: 32px;
+  filter: brightness(0) saturate(100%) invert(5%) sepia(53%) saturate(7425%)
+   hue-rotate(273deg) brightness(99%) contrast(109%);
+   scale: 1.2;
+   transition: 1s;
 }
 
 input[type="date"]::-webkit-datetime-edit-text {

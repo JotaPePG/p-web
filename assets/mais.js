@@ -160,18 +160,38 @@ function criarTabelasParaTarefas(listaDeTarefas) {
   });
 }
 
-// Verifica se os input estão em branco
+// Verifica se os inputs estão em branco
 
 document.addEventListener("DOMContentLoaded", function () {
-  const datetime = document.getElementById("datetime");
+  const inserttime = document.getElementById("inserttime");
 
-  if (meuInput) {
-    datetime.addEventListener("input", function () {
-      if (datetime.value.trim() !== "") {
-        datetime.classList.add("checked");
+    inserttime.addEventListener("input", function () {
+      if (inserttime.value.trim() !== "") {
+        inserttime.classList.add("checked");
       } else {
-        datetime.classList.remove("checked");
+        inserttime.classList.remove("checked");
       }
     });
-  }
+
+    form.addEventListener("submit", function(event) {
+
+      inserttime.classList.remove("checked");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const insertdate = document.getElementById("insertdate");
+
+    insertdate.addEventListener("input", function () {
+      if (insertdate.value.trim() !== "") {
+        insertdate.classList.add("checked");
+      } else {
+        insertdate.classList.remove("checked");
+      }
+    });
+
+    form.addEventListener("submit", function(event) {
+
+      insertdate.classList.remove("checked");
+  });
 });
