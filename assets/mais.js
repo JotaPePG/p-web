@@ -168,8 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
     inserttime.addEventListener("input", function () {
       if (inserttime.value.trim() !== "") {
         inserttime.classList.add("checked");
-      } else {
-        inserttime.classList.remove("checked");
       }
     });
 
@@ -185,9 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     insertdate.addEventListener("input", function () {
       if (insertdate.value.trim() !== "") {
         insertdate.classList.add("checked");
-      } else {
-        insertdate.classList.remove("checked");
-      }
+      } 
     });
 
     form.addEventListener("submit", function(event) {
