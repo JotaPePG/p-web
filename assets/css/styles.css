@@ -100,6 +100,11 @@ body {
   align-items: center;
   margin-left: 10%;
   white-space: nowrap;
+  transition: 0.3s;
+}
+
+.tab-btn:hover{
+  scale: 1.1;
 }
 
 .selected {
@@ -409,7 +414,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .help-btn:hover {
-  scale: 1.2;
+  scale: 1.1;
 }
 
 .help-btn:active {
@@ -422,14 +427,13 @@ input[type="checkbox"]:checked::before {
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #cccccc;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  background-clip: padding-box
   }
   
 ::-webkit-scrollbar-thumb {
   background: #00B4D8;
   border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Alteração de cor quando hover */
 }
