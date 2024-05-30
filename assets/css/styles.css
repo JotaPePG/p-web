@@ -314,6 +314,24 @@ input[type="checkbox"]:checked::before {
   color: #7c7c7c;
 }
 
+.time-checkbox.check {
+ text-decoration: line-through;
+}
+
+.taskname.check {
+  text-decoration: line-through;
+}
+
+.task {
+  transition: 1s;
+}
+
+.task.check {
+  opacity: 50%;
+  transition: 1.5s;
+  scale: 0.98;
+}
+
 .send {
   width: 60px;
   height: 60px;

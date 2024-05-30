@@ -140,6 +140,7 @@ function criarTabelaParaTarefa(task) {
   checkbox.classList.add("checkbox");
   checkbox.setAttribute("type", "checkbox");
   checkbox.setAttribute("class", "checkbox-todaytasks");
+  checkbox.setAttribute("onclick", "checkTask(this)");
 
   timeCheckboxDiv.appendChild(taskTime);
   timeCheckboxDiv.appendChild(checkbox);
@@ -191,3 +192,31 @@ document.addEventListener("DOMContentLoaded", function () {
       insertdate.classList.remove("checked");
   });
 });
+
+
+function checkTask(checkbox) {
+  const timecheckbox = checkbox.parentElement;
+
+  if (checkbox.checked) {
+    timecheckbox.classList.add('check');
+    
+  } else {
+    timecheckbox.classList.remove('check');
+  }
+}
+
+function checkTask(checkbox) {
+  const task = checkbox.closest('.task');
+  const taskname = task.querySelector('.taskname');
+  const timecheckbox = checkbox.parentElement;
+
+  if (checkbox.checked) {
+      taskname.classList.add('check');
+      timecheckbox.classList.add('check');
+      task.classList.add('check');
+  } else {
+      taskname.classList.remove('check');
+      timecheckbox.classList.remove('check');
+      task.classList.remove('check');
+  }
+}
